@@ -71,7 +71,7 @@ const nowesWork = async () => {
 const baseBall = async () => {
     const url = process.env.USUALLY_WEBHOOK;
     await axios.post(url, {
-        content: "오늘경기도 잘 줘!🤍",
+        content: "오늘경기도 잘 봐줘!🤍",
     });
     console.log("send message");
 

@@ -92,7 +92,7 @@ const nowesWork = async () => {
 const baseBall = async () => {
   const url = process.env.USUALLY_WEBHOOK;
   await _axios.default.post(url, {
-    content: "오늘경기도 잘 줘!🤍"
+    content: "오늘경기도 잘 봐줘!🤍"
   });
   console.log("send message");
   const response = {
