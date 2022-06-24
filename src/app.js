@@ -17,6 +17,9 @@ class sendMessage {
                 if (hour === 9 && minute === 0) {
                     daily();
                 }
+                if (day !== "Mon" && hour === 18 && minute === 0) {
+                    baseBall();
+                }
             }, ms);
         });
     }
@@ -65,6 +68,19 @@ const nowesWork = async () => {
     };
     return response;
 };
+const baseBall = async () => {
+    const url = process.env.USUALLY_WEBHOOK;
+    await axios.post(url, {
+        content: "오늘경기도 잘 줘!🤍",
+    });
+    console.log("send message");
+
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify("Hello from Lambda!"),
+    };
+    return response;
+};
 
 const client = new Discord.Client();
 
@@ -76,7 +92,6 @@ client.on("ready", () => {
 client.on("message", async (msg) => {
     if (msg.content === "test") {
         nowesWork();
-        daily();
     }
 });
 
