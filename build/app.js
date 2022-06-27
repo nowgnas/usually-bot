@@ -114,4 +114,4 @@ client.on("message", async msg => {
     nowesWork();
   }
 });
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN); // fjdk
